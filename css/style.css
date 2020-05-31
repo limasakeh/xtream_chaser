@@ -1,0 +1,64 @@
+/* 
+    Deskripsi:
+    File ini adalah style utama yang akan kita gunakan
+    agar desain nya konsisten, mengubah hal-hal penting dasar HTML
+    seperti body, a, p, img, dll.
+    Dalam File ini juga ada Header, Footer buat konsisten.
+    UBAH APABILA PERLU SAJA! Soalnya ini bakal jadi dasar dari SEMUA FILE.
+    Include FILE INI agar konsisten!
+*/
+
+/* Base HTML Element */
+body {
+    margin: 0;
+    margin-top: 120px;
+    padding: 0;
+    font-family: 'Roboto Condensed';
+    background-color: black;
+}
+
+img{
+    max-width: 20em;
+    max-height: 20em;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    padding: 1em;
+    align-self: center;
+}
+
+footer{
+    justify-content: center;
+    text-align: center;
+    background-color: gray;
+}
+
+p{
+    color: white;
+}
+
+/* Untuk Header */
+.header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgba(144,144,144,0.2);
+}
+
+.header > a{
+    padding-left: 4em;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: lightgrey;
+}
+
+.header > a > img{
+    max-width: 200px;
+    max-height: 100px;
+    padding: 10px;
+}

@@ -1,0 +1,19 @@
+/*
+    Deskripsi:
+    File ini untuk Home.
+    Created by: Limas Jaya Akeh
+*/
+
+/* Class */
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../asset/darkbg1.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* ID */
+#preregister{
+    color: gold;
+}
