@@ -1,0 +1,124 @@
+/* 
+    Gallery 
+    By Ron
+*/
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-image: url("../asset/darkbg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header
+{
+    z-index: 1;
+}
+
+/* Upper Content */
+
+.upper-content
+{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.upper-content img
+{
+    z-index: -1;
+    position: relative;
+    display: inline-block;
+    transform: scale(1.5);
+}
+
+#left_guy
+{
+    float: left;
+    max-height: 100%;
+    margin-top: 165px;
+    margin-left: 100px;
+    margin-bottom: -125px;
+}
+
+#right_guy
+{
+    float: right;
+    max-height: 90%;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+.desc-wrapper
+{
+    z-index: 0;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 75%;
+    font-size: 36px;
+}
+
+.desc-wrapper h2
+{
+    color: gold;
+}
+
+.desc-wrapper p
+{
+    margin-bottom: 30px;
+}
+
+.desc-wrapper a
+{
+    padding: 20px;
+    color: white;
+    background-color: black;
+}
+
+/* Lower Content */
+
+.lower-content
+{
+    margin-top: 300px;
+}
+
+.character-box-row
+{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.character-box
+{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.character-box h2
+{
+    margin-top: 0px;
+    color: white;
+    font-size: 21px;
+    letter-spacing: 2px;
+}
+
+.character-box img
+{
+    border: white;
+    border-style: solid;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+}
