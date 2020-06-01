@@ -12,47 +12,5 @@ body
 
 /* Content */
 
-.content
-{
-    text-align: center;
-    margin: 0 auto;
-}
 
-.radius-border
-{
-    width: 40em;
-    border: grey;
-    border-style: solid;
-    border-radius: 5em;
-    padding: 10px;
-    margin: auto;
-}
 
-.outer-wrapper
-{
-    padding: 10px;
-    border: grey;
-    border-style: solid;
-    display: inline-block;
-}
-
-.inner-wrapper
-{
-    border: gold;
-    border-style: solid;
-    padding: 5em 10em;
-    display: inline-block;
-}
-
-.content h2
-{
-    color: #f16601;
-}
-
-.btn-see-more
-{
-    padding: 10px 20px;
-    color: white;
-    border: gold;
-    border-style: solid;
-}
