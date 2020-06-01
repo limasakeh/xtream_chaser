@@ -6,11 +6,9 @@
 
 /* Class */
 body{
-    display: flex;
-    flex-direction: column;
     background-image: url('../asset/darkbg1.png');
-    background-size: 100%;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* ID */
