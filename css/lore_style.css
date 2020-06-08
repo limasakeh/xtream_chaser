@@ -1,7 +1,7 @@
-/* 
-    For Lore page
-    By Ron
-*/
+html
+{
+    scroll-behavior: smooth;
+}
 
 body
 {
@@ -10,7 +10,86 @@ body
     background-size: cover;
 }
 
-/* Content */
+.header
+{
+    z-index: 1;
+}
+
+.title
+{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 75%;
+    height: 100%;
+    top: 65%;
+    left: 50%;
+    z-index: 0;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-size: 36px;
+    color: gold;
+}
+
+.content
+{
+    margin-top: 250px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;   
+}
+
+.lore-box
+{
+	display: table-cell;
+	width: 30%;
+    margin-right: 20px;
+}
+
+.lore-box h2
+{
+    margin-top: 5px;
+    color: gold;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.lore-box img
+{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.lore-box p
+{
+	font-size: 18px;
+}
 
 
+@media only screen and (max-width: 799px)
+{
+    .title
+    {
+        padding: 0px;
+        top: 68%;
+        width: 90%;
+        margin: 0px;
+        font-size: 40px;
+    }
 
+    .content
+    {
+        margin-top: 500px;
+        padding-top: 150px;
+        margin-bottom: 70px;
+        display: table-cell;
+        width: 69%;
+    }
+
+    .lore-box
+    {
+        display: contents;
+    }
+}
