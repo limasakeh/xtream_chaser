@@ -1,0 +1,320 @@
+/* Characters
+    By Ron */
+
+body
+{
+    background-image: url("../asset/darkbg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content
+{
+    margin-top: 130px;
+}
+
+.character-box-row
+{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.character-box
+{
+    display: inline-block;
+    margin-right: 30px;
+    transition: transform 0.1s;
+}
+
+.character-box h2
+{
+    margin-top: 0px;
+    color: white;
+    font-size: 21px;
+    letter-spacing: 2px;
+}
+
+.character-box img
+{
+    border: white;
+    border-style: solid;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.character-box:hover
+{
+    transform: scale(1.1);
+}
+
+/* Character Description */
+
+/* .content
+{
+    display: none;
+} */
+
+.content-desc
+{
+    position: fixed;
+    overflow: overlay;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 500ms;
+    display: none;
+    width: 100%;
+    margin-top: 80px;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.content-desc:target
+{
+    display: initial;
+    opacity: 1;
+}
+
+.character-image
+{
+    float: left;
+    /* margin-left: 200px; */
+    /* margin-right: 50px; */
+}
+
+.character-image img
+{
+    max-width: unset;
+    max-height: unset;
+}
+
+#sub-zero .character-image img
+{
+    width: 650px;
+    margin-top: -24px;
+    margin-left: 70px;
+}
+
+#scorpion .character-image img
+{
+    width: 950px;
+    margin: 35px -100px 0px -90px;
+}
+
+#raiden .character-image img
+{
+    width: 650px;
+    margin-top: -15px;
+    margin-left: 90px;
+}
+
+#jax .character-image img
+{
+    width: 500px;
+    margin-top: -35px;
+    margin-left: 160px;
+}
+
+#johnny .character-image img
+{
+    width: 650px;
+    margin: -20px -70px 0px 110px;
+}
+
+#quan-chi .character-image, #shinnok .character-image, #kenshi .character-image
+{
+    overflow: hidden;
+}
+
+#quan-chi .character-image img
+{
+    width: 650px;
+    margin-top: -20px;
+    margin-left: 80px;
+    margin-bottom: -350px;
+}
+
+#reptile .character-image img
+{
+    width: 600px;
+    margin-left: 130px;
+    margin-top: 25px;
+}
+
+#ermac .character-image img
+{
+    width: 670px;
+    margin: -25px -80px 0px 100px;
+}
+
+#shinnok .character-image img
+{
+    width: 650px;
+    margin-top: -20px;
+    margin-left: 70px;
+    margin-bottom: -100px;
+}
+
+#kenshi .character-image img
+{
+    width: 380px;
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-bottom: -150px;
+}
+
+.character-desc
+{
+    text-align: justify;
+    margin-top: 60px;
+    margin-right: 50px;
+    margin-left: 50%;
+}
+
+.content-desc-close
+{
+    color: white;
+    float: right;
+    font-size: 200%;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.character-desc h1
+{
+    margin: 0;
+    font-size: 80px;
+    letter-spacing: 2px;
+    color: gold;
+}
+
+.character-desc p
+{
+    font-size: 24px;
+    line-height: 42px;
+}
+
+@media only screen and (max-width: 799px)
+{
+
+    .content
+    {
+        margin-bottom: 70px;
+    }
+
+    .character-box-row
+    {
+        margin-bottom: 0px;
+        display: table-cell;
+        width: 69%;
+    }
+
+    .character-box
+    {
+        display: contents;
+    }
+
+    .character-image
+    {
+        float: none;
+    }
+
+    #sub-zero .character-image img, #raiden .character-image img
+    {
+        width: 46%;
+        margin-top: 10px;
+        margin-left: 27%;
+    }
+
+    #scorpion .character-image img
+    {
+        width: 65%;
+        margin: 30px -100px 0px 20%;
+    }
+
+    #jax .character-image img
+    {
+        width: 37%;
+        margin-top: -10px;
+        margin-left: 34%;
+    }
+
+    #johnny .character-image img
+    {
+        width: 46%;
+        margin-top: 10px;
+        margin-left: 31%;
+    }
+
+    #quan-chi .character-image, #reptile .character-image, #kenshi .character-image
+    {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    #quan-chi .character-image img
+    {
+        width: 50%;
+        margin: -15px 0px -300px 25%;
+    }
+
+    #reptile .character-image img
+    {
+        width: 40%;
+        margin-top: -10px;
+        margin-left: 33%;
+    }
+
+    #ermac .character-image img
+    {
+        width: 47%;
+        margin-top: 0px;
+        margin-left: 30%;
+    }
+
+    #shinnok .character-image
+    {
+        width: 100%;
+    }
+
+    #shinnok .character-image img
+    {
+        width: 40%;
+        margin: -20px 0px -30px 33%;
+    }
+
+    #kenshi .character-image img
+    {
+        width: 30%;
+        margin: 0px 0px -160px 38%;
+    }
+
+    .character-desc
+    {
+        margin: 0px 100px;
+    }
+
+    .content-desc-close
+    {
+        font-size: 150%;
+        margin-top: 10px;
+        margin-right: 100px;
+    }
+
+    .character-desc h1
+    {
+        font-size: 40px;
+        text-align: center;
+        margin: 10px 0px;
+        margin-left: 60px;
+    }
+
+    .character-desc p
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
