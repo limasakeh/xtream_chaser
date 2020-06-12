@@ -70,10 +70,33 @@ p{
     color: rgb(238, 139, 21);
 }
 
+.hidden{
+    display: none;
+}
+
 @media only screen and (max-width: 799px)
 {
     .to-be-hidden
     {
         display: none;
     }
+
+    .hidden
+    {
+        display: flex;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-size: 22px;
+        color: lightgrey;
+    }
+
+    .header.responsive{
+        position: relative;
+    }
+
+    .header.responsive a{
+        display: inline-block;
+        text-align: center;
+    }
+
 }

@@ -51,3 +51,43 @@ $(document).ready(function(){
         }
       });
 });
+
+function SwitchToMobileView(){
+  var nav = document.getElementById("navbar");
+  var navButtons = $('.navbutton');
+
+  console.log(navButtons);
+
+  if(navButtons === ".to-be-hidden")
+  {
+    navButtons.removeClass('to-be-hidden');
+  }
+  else
+  {
+    navButtons.addClass('to-be-hidden');
+  }
+
+  if(nav.className === "header")
+  {
+    nav.className += "responsive";
+  }
+  else
+  {
+    nav.className = "header";
+  }
+}
+
+$(window).resize(function(){
+  var currHeight = $(window).height();
+  var currWidth = $(window).width();
+
+  console.log(currHeight,currWidth);
+
+  if(currHeight > 600 || currWidth > 600)
+  {
+    var navButtons = $('.navbutton');
+    var nav = document.getElementById("navbar");
+    navButtons.addClass('to-be-hidden');
+    nav.className = "header";
+  }
+});
