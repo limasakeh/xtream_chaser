@@ -179,9 +179,20 @@ body
 
     .character-box-row
     {
-        margin-bottom: 0px;
-        display: table-cell;
-        width: 69%;
+        width: initial;
+        margin-bottom: 50px;
+    }
+
+    .character-box-row:first-child
+    {
+        margin-left: 18%;
+        float: left;
+    }
+
+    .character-box-row:nth-child(2)
+    {
+        float: right;
+        margin-right: 18%;
     }
 
     .character-box

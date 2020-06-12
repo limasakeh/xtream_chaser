@@ -66,6 +66,8 @@ body
     z-index: 0;
     top: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
     opacity: 0;
     transition: opacity 500ms;
     display: none;
@@ -201,7 +203,6 @@ body
 
 @media only screen and (max-width: 799px)
 {
-
     .content
     {
         margin-bottom: 70px;
@@ -209,9 +210,20 @@ body
 
     .character-box-row
     {
-        margin-bottom: 0px;
-        display: table-cell;
-        width: 69%;
+        width: initial;
+        margin-bottom: 50px;
+    }
+
+    .character-box-row:first-child
+    {
+        margin-left: 18%;
+        float: left;
+    }
+
+    .character-box-row:nth-child(2)
+    {
+        float: right;
+        margin-right: 18%;
     }
 
     .character-box
