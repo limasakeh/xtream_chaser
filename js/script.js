@@ -2,8 +2,9 @@ $(document).ready(function(){
     $('.next').on('click', function(){
         console.log('Clicked!');
 
-        var container = $('.jquery_head');    
-        var carousel = container.children('.carousel_container');
+        var container = $('.container');    
+        var sliderOuter = container.children('.slider_outer');
+        var carousel = sliderOuter.children('.slider_inner');
         var currentSlide = carousel.children('.active');
         var nextSlide = currentSlide.next();
 
@@ -20,8 +21,9 @@ $(document).ready(function(){
     $('.prev').on('click', function(){
         console.log('Clicked!');
         
-        var container = $('.jquery_head');
-        var carousel = container.children('.carousel_container');
+        var container = $('.container');
+        var sliderOuter = container.children('.slider_outer');
+        var carousel = sliderOuter.children('.slider_inner');
         var currentSlide = carousel.children('.active');
         var prevSlide = currentSlide.prev();
 

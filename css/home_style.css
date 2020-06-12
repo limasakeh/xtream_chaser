@@ -21,6 +21,7 @@ body{
     height: 100%;
 }
 
+
 .content img{
     max-width: 100% !important;
     max-height: 100% !important;
@@ -37,28 +38,48 @@ body{
     border-style: solid;
 }
 
-.jquery_head{
-    margin: 0;
-    padding: 0;
+.container{
     width: 100%;
-    background-repeat: no-repeat;
+    overflow: auto;
 }
 
-.jquery_head .carousel_container{
-    position: absolute;
+.slider_inner{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.slide{
+    display: none;
     width: 100%;
     height: 100%;
 }
 
-.jquery_head .slide{
-    position: absolute;
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+.active{
+    display: inline-block;
+}
+/*
+.jquery_head .carousel_container{
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel_container .slide{
     left: 0;
     top: 0;
     display: none;
     width: 100%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
     z-index: 1;
     overflow: hidden;
 }
@@ -78,32 +99,28 @@ body{
 
 .jquery_head .active{
     display: block;
-}
-
-.jquery_head .button{
-    width: 100%;
-    position: absolute;
-    justify-self: center;
-    bottom: 40%;
-    z-index: 11;
-    overflow: hidden;
-}
+} */
 
 .prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    float: left;
     width: 80px;
     height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 130px;
 }
 
 .prev{
-    float: left;
+    left: 0;
+    margin-right: -45px;
+    z-index: 100;
 }
 
 .next{
-    float: right;
+    right: 0;
+    margin-left: -45px;
+    z-index: 100;
 }
 
 header{
@@ -114,6 +131,19 @@ footer{
     z-index: 20;
 }
 /* ID */
+
+#slide_info_1{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+#slide_info_2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+/*
 #slide_info_1{
     z-index: 12;
     width:40%;
@@ -132,6 +162,7 @@ footer{
     text-align: center;
     padding-top: 20%;
 }
+*/
 
 #preregister{
     color:  rgb(238, 139, 21);
