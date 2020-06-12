@@ -17,10 +17,17 @@ body
     color: gold;
 }
 
+.content
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
 .lore-box
 {
-    display: table-cell;
     text-align: center;
+    margin: 10px auto;
 }
 
 .lore-box h2
@@ -63,18 +70,11 @@ body
     .content
     {
         text-align: center;
-        margin: 0;
-    }
-
-    .lore-box
-    {
-        display: contents;
     }
 
     .lore-box p
     {
         font-size: 18px;
         text-align: justify;
-        margin: 10px 0px 30px 20%;
     }
 }
