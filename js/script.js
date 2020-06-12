@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+  var firstSlide = $('.firstSlide');
+  var lastSlide = $('.lastSlide');
+
     $('.next').on('click', function(){
         console.log('Clicked!');
 
@@ -15,6 +19,11 @@ $(document).ready(function(){
         if(nextSlide.length){
             currentSlide.removeClass('active').css('z-index', -10);
             nextSlide.addClass('active').css('z-index', 10);
+        }
+        else{
+          nextSlide = firstSlide;
+          currentSlide.removeClass('active').css('z-index', -10);
+          nextSlide.addClass('active').css('z-index', 10);
         }
     });
 
@@ -34,6 +43,11 @@ $(document).ready(function(){
         if(prevSlide.length){
           currentSlide.removeClass('active').css('z-index', -10);
           prevSlide.addClass('active').css('z-index', 10);
+        }
+        else{
+          nextSlide = lastSlide;
+          currentSlide.removeClass('active').css('z-index', -10);
+          nextSlide.addClass('active').css('z-index', 10);
         }
       });
 });
