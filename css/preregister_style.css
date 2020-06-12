@@ -1,0 +1,112 @@
+/* General */
+body{
+    background-image: url('../asset/darkbg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    color: black;
+    font-size: 20px;
+}
+
+form{
+    z-index: 0;
+}
+
+input{
+    border-radius: 5px;
+    margin: 0.2em;
+    width: 30em;
+    color: black;
+}
+
+input[type="radio"]{
+    width: 1em;
+}
+
+input[type="checkbox"]{
+    width: 1em;
+}
+
+input[type="submit"]{
+    background-color: rgb(238, 139, 21);
+    width: 10em;
+    color: black;
+}
+
+input[type="submit"]:hover{
+    background-color: gold;
+}
+
+/* Class */
+.content{
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Form */
+.container{
+    color: rgb(238, 139, 21);
+    padding: 5em;
+    display: flex;
+    flex-direction: row;
+}
+
+.container p{
+    font-size: 20px;
+}
+
+.container *{
+    padding: 5px;
+    color :  rgb(238, 139, 21);
+}
+
+.container input{
+    color: black;
+}
+
+.container select{
+    color: black;
+}
+
+.container option{
+    color: black;
+}
+/* ID */
+#form_register {
+    border: 10px black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(66, 66, 66);
+    text-align: center;
+    margin: 1em;
+}
+
+
+
+#chara_right{
+    position: absolute;
+    z-index: -1;
+    right: 10em;
+    top: 15em;
+    float: right;
+    transform: scale(1.75);
+}
+
+#desc_form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#input_form{
+    display: flex;
+    flex-direction: column;
+}
+
+#form_beautify{
+    display: flex;
+    flex-direction: row;
+}
