@@ -9,52 +9,126 @@ body{
     background-image: url('../asset/darkbg1.png');
     background-repeat: no-repeat;
     background-size: cover;
-}
-.radius-border
-{
-    width: 40em;
-    border: grey;
-    border-style: solid;
-    border-radius: 5em;
-    padding: 10px;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
-.outer-wrapper
-{
-    padding: 10px;
-    border: grey;
-    border-style: solid;
-    display: inline-block;
-}
-
-.inner-wrapper
-{
-    border: gold;
-    border-style: solid;
-    padding: 5em 10em;
-    display: inline-block;
-}
-
-.content
-{
-    text-align: center;
+.content{
     margin: 0 auto;
+    width: 100%;
+    height: 100%;
 }
 
-.content h2
-{
+.content img{
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.content h2{
     color: #f16601;
 }
 
-.btn-see-more
-{
+.btn-see-more{
     padding: 10px 20px;
     color: white;
     border: gold;
     border-style: solid;
 }
+
+.jquery_head{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.jquery_head .carousel_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.jquery_head .slide{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.slide img{
+    height: 100%;
+    width: 100%;
+}
+
+.jquery_head img{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.jquery_head .active{
+    display: block;
+}
+
+.jquery_head .button{
+    width: 100%;
+    position: absolute;
+    justify-self: center;
+    bottom: 40%;
+    z-index: 11;
+    overflow: hidden;
+}
+
+.prev, .next{
+    width: 80px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev{
+    float: left;
+}
+
+.next{
+    float: right;
+}
+
+footer{
+    z-index: 20;
+}
 /* ID */
+#slide_info_1{
+    z-index: 12;
+    width:40%;
+    height:100%;
+    padding-left:200px;
+    padding-top:150px;
+    position: absolute;
+}
+
+#slide_info_2{
+    z-index: 15;
+    width:100%;
+    height:100%;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    padding-top: 20%;
+}
+
 #preregister{
     color:  rgb(238, 139, 21);
 }
