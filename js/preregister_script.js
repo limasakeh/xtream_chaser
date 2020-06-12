@@ -1,55 +1,86 @@
 $('document').ready(function(){
     console.log("Ready");
+    console.log("Created by Limas, Fixed by Ron");
 });
 
-function Process(){
-    // Returns value by using .value behind (except Radio)
-    var form = document.getElementById("form_register");
-    let name = document.getElementById("username");
-    var password = document.getElementById("password");
-    var email = document.getElementById("email");
-    var dob = document.getElementById("dob");
-    var userMale = document.getElementById("userMale").checked;
-    var userFemale = document.getElementById("userFemale").checked;
-    var nation = document.getElementById("nation");
-    
+function checkName()
+{
+    var name = document.getElementById("username");
+
     if(name.value.length < 5)
     {
-        alert("Name length must be at least 5!");
+        name.setCustomValidity("Username must be at least 5 characters long!");
     }
-
-    if(name.value.password < 5)
+    else
     {
-        alert("Password length must be at least 5!");
-    }
-    var checkEmail = testEmail(email);
-
-    if(checkEmail == false)
-    {
-        alert("Please check Email!");
+        name.setCustomValidity("");
     }
 }
 
-function testEmail(email){
+function checkPassword()
+{
+    var pass = document.getElementById("password");
 
-    var checkAt = email.indexOf("@");
-    if(checkAt == 0) return false;
-
-    var dot = email.indexOf(".");
-    if(dot == 0 || dot == email.length - 1) return false;
-
-
-    var AtAmount = 0;
-    for(var i = 0; i < email.length ; i++){
-        if(email.charAt(i) == "@") 
-        {
-            AtAmount++;
-        }
-
+    if(pass.value.length < 7)
+    {
+        pass.setCustomValidity("Password must be at least 7 characters long!");
     }
+    else
+    {
+        pass.setCustomValidity("");
+    }
+}
 
-    console.log(AtAmount);
+function checkConfirm()
+{
+    var conf = document.getElementById("confirm");
+    var pass = document.getElementById("password");
 
-    if(AtAmount == 1) return true;
-    else return false;
+    if(conf.value != pass.value)
+    {
+        conf.setCustomValidity("Password doesn't match");
+    }
+    else
+    {
+        conf.setCustomValidity("");
+    }
+}
+
+function checkEmail()
+{
+    var email = document.getElementById("email");
+
+    if( email.value.startsWith("@") || email.value.endsWith("@") || 
+        email.value.startsWith(".") || email.value.endsWith(".") || 
+        email.value.startsWith(" ") || email.value.endsWith(" ") || email.value.includes(" ") || 
+        !isNaN(email.value.charAt(0)) || !isNaN(email.value.charAt(email.value.length-1)) || 
+        !isNaN(email.value.charAt(email.value.indexOf("@")+1)))
+        {
+            email.setCustomValidity("Invalid email format.");
+        }
+    else
+    {
+        email.setCustomValidity("");
+    }
+}
+
+function checkDOB()
+{
+    var dob = document.getElementById("dob");
+
+    // get today's date with ISO String and split by T then get first index after split => yyyy-mm-dd
+    var today = new Date();
+
+    if(dob.value > today.toISOString().split("T")[0])
+    {
+        dob.setCustomValidity("Date further than today (" + today.toISOString().split("T")[0] +  ") is not allowed");
+    }
+    else if(today.getFullYear() - dob.value.split("-")[0] < 18)
+    {
+        dob.setCustomValidity("You must be at least 18 years old");
+    }
+    else
+    {
+        dob.setCustomValidity("");
+    }
 }

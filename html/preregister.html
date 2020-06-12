@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre Register</title>
     <!-- Favicon -->
-    <link rel="icon" href="../asset/logo1.png">
+    <link rel="icon" href="../asset/logoaja.png">
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/preregister_style.css">
-    
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/preregister_script.js"></script>
 </head>
 <body>
     
@@ -33,22 +35,24 @@
 
     <div class="content">
         <div class="container">
-            <form id="form_register" onsubmit="Process()">
-                <p> PRE-REGISTER </p>
+            <form id="form_register" method="POST">
+                <h2> PRE-REGISTER </h2>
 
                 <div id="form_beautify">
                     <div id="desc_form">
-                        <label>Username</label>
-                        <label>Password</label>
-                        <label>Email</label>
-                        <label>Date of Birth</label>
+                        <label for="username">Username</label>
+                        <label for="password">Password</label>
+                        <label for="confirm">Confirm Password</label>
+                        <label for="email">Email</label>
+                        <label for="dob">Date of Birth</label>
                     </div>
                     
                     <div id="input_form">
-                        <input type="text" id="username" placeholder="Input Username here" required>
-                        <input type="password" id="password" placeholder="Input Password here" required>
-                        <input type="email" id="email" placeholder="Input Email here" required>
-                        <input type="date" id="dob" required>
+                        <input type="text" id="username" placeholder="Input Username here" oninput="checkName()" required>
+                        <input type="password" id="password" placeholder="Input Password here" oninput="checkPassword()" required>
+                        <input type="password" id="confirm" placeholder="Confirm Password" oninput="checkConfirm()" required>
+                        <input type="email" id="email" placeholder="Input Email here" oninput="checkEmail()" required>
+                        <input type="date" id="dob" min="1900-01-01" oninput="checkDOB()" required>
                     </div>
                 </div>
                
@@ -61,7 +65,7 @@
                 </div>
                 
                 <div id="nation_area">
-                    <label>Nation</label>
+                    <label for="nation">Nationality</label>
                     <select name="nation" id="nation" required>
                         <option value="">Country...</option>
                         <option value="China">China</option>
@@ -73,11 +77,10 @@
                 </div>
                 
                 <div id="term">
-                    <input type="checkbox" required> I Agree to Term and Agreement
+                    <input type="checkbox" id="checkbox" required><label for="checkbox">I agree to terms and conditions</label>
                 </div>
 
-                    <input type="submit">
-                
+                <input type="submit">
             </form>
         </div>
 
@@ -93,7 +96,4 @@
     </footer>
 </body>
 
-<!-- JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="../js/preregister_script.js"></script>
 </html>
