@@ -81,11 +81,6 @@ p{
         display: none;
     }
 
-    .mobile-view{
-        display: inline-block;
-        text-align: center;
-    }
-
     .hidden
     {
         display: flex;
@@ -106,6 +101,10 @@ p{
         padding: 10px;
         display: block;
         text-align: center;
+    }
+
+    .header.responsive .hidden{
+        display: none;
     }
 
 }
