@@ -14,18 +14,20 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/characters_style.css">
     <!-- JS --> 
+    <script type="text/javascript" src="../js/navbar_script.js"></script>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <div class="header">
+        <div class="header" id="navbar">
             <a href="index.html"><img src="../asset/logo1.png"></a>
-            <a href="index.html" class="to-be-hidden">Home</a>
-            <a href="gallery.html" class="to-be-hidden">Gallery</a>
-            <a href="characters.html" class="to-be-hidden">Characters</a>
-            <a href="lore.html" class="to-be-hidden">Lore</a>
+            <a href="index.html" class="navbutton to-be-hidden">Home</a>
+            <a href="gallery.html" class="navbutton to-be-hidden">Gallery</a>
+            <a href="characters.html" class="navbutton to-be-hidden">Characters</a>
+            <a href="lore.html" class="navbutton to-be-hidden">Lore</a>
             <a href="preregister.html" id="preregister">Pre - Register</a>
+            <a href="#" class="hidden" onclick="SwitchToMobileView()">&#9776;</a>
         </div>
     </header>
 
