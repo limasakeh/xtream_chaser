@@ -81,6 +81,11 @@ p{
         display: none;
     }
 
+    .mobile-view{
+        display: inline-block;
+        text-align: center;
+    }
+
     .hidden
     {
         display: flex;
@@ -92,10 +97,14 @@ p{
 
     .header.responsive{
         position: relative;
+        top: -100px;
+        display: inline-block;
+        text-align: center;
     }
 
     .header.responsive a{
-        display: inline-block;
+        padding: 10px;
+        display: block;
         text-align: center;
     }
 
